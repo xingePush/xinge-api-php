@@ -422,7 +422,7 @@ class XingeApp
      */
     public function PushAccountListMultiple($pushId, $accountList)
     {
-        $pushId = intval($pushId);
+//        $pushId = intval($pushId);
         $ret = array('ret_code' => -1);
         if ($pushId <= 0) {
             $ret['err_msg'] = 'pushId not valid';
@@ -446,7 +446,7 @@ class XingeApp
      */
     public function PushDeviceListMultiple($pushId, $deviceList)
     {
-        $pushId = intval($pushId);
+//        $pushId = intval($pushId);
         $ret = array('ret_code' => -1);
         if ($pushId <= 0) {
             $ret['err_msg'] = 'pushId not valid';
