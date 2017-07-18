@@ -594,7 +594,7 @@ class XingeApp
 
     private function ValidateToken($token)
     {
-        if (intval($this->accessId) >= 2200000000) {
+        if ($this->accessId >= 2200000000) {
             return strlen($token) == 64;
         } else {
             return (strlen($token) == 40 || strlen($token) == 64);
@@ -724,9 +724,9 @@ class XingeApp
 
     private function ValidateMessageType($message)
     {
-        if (intval($this->accessId) >= XingeApp::IOS_MIN_ID and $message instanceof MessageIOS)
+        if ($this->accessId >= XingeApp::IOS_MIN_ID and $message instanceof MessageIOS)
             return true;
-        else if (intval($this->accessId) < XingeApp::IOS_MIN_ID and $message instanceof Message)
+        else if ($this->accessId < XingeApp::IOS_MIN_ID and $message instanceof Message)
             return true;
         else
             return false;
